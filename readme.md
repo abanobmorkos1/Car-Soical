@@ -2,10 +2,10 @@
 
 - **Project Name:** Car Social
 - **Project By:** Abanob Morkos
-- [**LINK TO GITHUB**](http://www.github.com)
-- [**LINK TO DEPLOYED WEBSITE**](http://www.render.com)
+- [**LINK TO GITHUB**](https://github.com/abanobmorkos1/project2.git)
+- [**LINK TO DEPLOYED WEBSITE**](https://project2-5847.onrender.com)
 - **List of Technologies used:** HTML, JS, CSS, Node, Express, EJS, Mongo , jQuery , Figma.
-- [**LINK TO TRELLO**](http://www.render.com)
+- [**LINK TO TRELLO**](https://trello.com/invite/b/Bnlb35FH/ATTI9a24d90b540304af3a3aa062b3447d7337BD880A/car-social)
 
 ## Description
 
@@ -35,6 +35,4 @@ Car Social is a web application that looks to connect car enthusiasts and share 
 
 ## ERD (ENTITY RELATIONSHIP DIAGRAM)
 
-![PICTURE OF ERD](http://imgur.com)
-
-- [Free ERD Diagram Tool](https://dbdiagram.io/home)
+- [**LINK TO ERD**](https://lucid.app/lucidchart/e05a0bcf-d35e-499a-9584-fb7db7475818/edit?viewport_loc=-1761%2C-642%2C5163%2C2238%2C0_0&invitationId=inv_d5a9bf17-5e4c-4321-9cea-027c39e4c8ab)
