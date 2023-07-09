@@ -15,7 +15,7 @@ app.use(express.static('public')); // serve static files from the public folder
 // Routes
 
 app.get('/' , (req, res) => {
-    res.send("hello world")
+    res.render('signup.ejs')
 })
 
 

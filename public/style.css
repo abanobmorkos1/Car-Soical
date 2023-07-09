@@ -1,0 +1,30 @@
+/* heading car social */
+#cs{
+ 
+    text-align: center;
+}
+/* desc sign up / login */
+#desc{
+    display: flex;
+    width: 320px;   
+    height: 400px;
+    margin: 5px;
+}
+/* signup box */
+
+#signup{
+    height: 200px;
+    width: 482px;
+    background-color: aqua;
+    float: right;
+    margin-bottom: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    grid-auto-flow: row;
+}
+
