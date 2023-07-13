@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cars</h1>
+    <% garage.forEach(element => { %>
+        <div>
+            <h1><%= element.make %></h1>
+            <a href="/garage/<%= element._id %>/edit"> <button> Edit</button></a>
+           <form action="/garage/<%= element._id %>?_method=DELETE" method="post">
+            <input type="submit" value="delete" />
+            </form>
+        </div>
+    <% }) %>
+</body>
+</html>

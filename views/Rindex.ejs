@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cars</h1>
+    <% route.forEach(element => { %>
+        <div>
+            <h1>Start</h1>
+            <h2> <%= element.start %></h2>
+            <h1>End</h1>
+            <h2><%= element.end %></h2>
+            <a href="/route/<%= element._id %>/edit"> <button> Edit</button></a>
+           <form action="/route/<%= element._id %>?_method=DELETE" method="post">
+            <input type="submit" value="delete" />
+            </form>
+        </div>
+    <% }) %>
+</body>
+</html>
