@@ -27,6 +27,9 @@ app.use(session({
     resave: false,
 }));
 // Routes
+app.get('/' ,(req ,res) => {
+    res.redirect('/user/signup')
+})
 app.use('/user', userRouter); 
 app.use('/garage', garageRouter); 
 app.use('/route', routesRouter); 
