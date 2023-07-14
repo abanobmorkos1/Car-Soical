@@ -21,24 +21,24 @@ router.get('/login' , (req, res) => {
     res.render('login.ejs');
 })
 
-router.post('/login' , async (req, res) => {
+router.post('/login', async (req, res) => {
+    const user = await User.findOne({ username: req.body.username });
 
-    const user = await User.findOne({username : req.body.username});
+    if (!user) {
+        res.send('user doesnt exist')
+    } else {
+        const password = bcrypt.compareSync(req.body.password, user.password)
+        if (password) {
+            console.log(user);
+            req.session.user = req.body.username;
+            req.session.loggedIn = true;
+            res.redirect('/route');
 
-    if(!user){
-        res.send('user not found');
-    }else{
-        const passmatch = bcrypt.compareSync(req.body.password , user.password)
-        if(passmatch){
-        req.session.username = user.username
-        req.session.loggedIn = true
-        res.redirect('/route');
-    }else{
-        res.send('wrong password');
-    }}
-
-})
-
+        } else {
+            res.send('wrong password')
+        }
+    }
+});
 
 
 module.exports = router;

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include(./partials/files.ejs) %>
 </head>
 <body>
-    <h1>Cars</h1>
+
     <% garage.forEach(element => { %>
         <div>
             <h1><%= element.make %></h1>

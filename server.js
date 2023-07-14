@@ -20,9 +20,6 @@ app.use(morgan('dev')); // log requests to the console
 app.use(methodOverride('_method')); //override with post having ?_method=DELETE or ?_method=put
 app.use(express.static('public')); // serve static files from the public folder
 app.use(express.urlencoded ({ extended: true })); 
-app.use('/garage', garageRouter); 
-app.use('/route', routesRouter); 
-app.use('/user', userRouter); 
 app.use(session({
     secret: process.env.SECRET,
     store: mongoStore.create({ mongoUrl: process.env.DATABASE_URL}),
@@ -30,6 +27,9 @@ app.use(session({
     resave: false,
 }));
 // Routes
+app.use('/user', userRouter); 
+app.use('/garage', garageRouter); 
+app.use('/route', routesRouter); 
 
 // listen 
 const PORT = process.env.PORT || 3000;
