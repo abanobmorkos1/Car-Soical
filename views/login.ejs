@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('./partials/files.ejs') %>
 </head>
 <body>
-    <h1> Login page </h1>
-    <form action="/user/login" method="post">
+    <div id="form">
+        <form action="/user/login" method="post">
+        <h1>Login</h1>
         <input type="text" name="username" placeholder="Username">
+        <br>
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Signup">    
-    </form>
+        <br>
+        <input type="submit" value="Login">    
+        </form>
+    </div>
+    <h1 id="WTC" >Welcome back to Car Social</h1>
+    <div id="desc">
+        <h2>We're thrilled to have you here, ready to dive into the world of automotive camaraderie. Get ready to rev up your experience and join a passionate community of car enthusiasts.
+        The CarSocial Login Forum is your gateway to unlocking the full potential of our platform. Share your thoughts, insights, and expertise, and engage in vibrant discussions with fellow enthusiasts from around the globe.</h2>
+    </div>
 </body>
 </html>

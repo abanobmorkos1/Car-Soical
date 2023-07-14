@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('./partials/files.ejs') %>
 </head>
 <body>
-    <h1>Signup page</h1>
-
-<form action="/user/signup" method="post">
-    <input type="text" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Signup">    
-</form>
-</body>
-</html>
+    
+    <div id="form">
+        <form action="/user/signup" method="post">
+            <h1>Signup page</h1>
+            <input type="text" name="username" placeholder="Username">
+            <br>
+            <input type="password" name="password" placeholder="Password">
+            <br>
+            <input type="submit" value="Signup"> <br> 
+            <p>Already a user?<p>
+                <a href="/user/login">Login</a>
+            </div>
+            <h1 id="WTC" >Welcome to Car Social</h1>
+            <div id="desc">
+                <h2>Rev up your engines and join a vibrant community of car enthusiasts like yourself. We're thrilled to have you on board. 
+                CarSocial is more than just a platform—it's a driving force that brings together like-minded individuals who share a deep love for automobiles. Whether you're a speed aficionado, a vintage car connoisseur, or a gearhead with a thirst for knowledge, you've found your home among fellow petrolheads.</h2>
+            </div> 
+        </form>
+    </body>
+    </html>

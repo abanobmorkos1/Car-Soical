@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <%- include(./partials/files.ejs) %>
+    <%- include('./partials/files.ejs') %>
 </head>
 <body>
 
     <% garage.forEach(element => { %>
-        <div>
+        <div id="garage">
             <h1><%= element.make %></h1>
             <a href="/garage/<%= element._id %>/edit"> <button> Edit</button></a>
+            <div id="buttons">
            <form action="/garage/<%= element._id %>?_method=DELETE" method="post">
             <input type="submit" value="delete" />
+            </div>
             </form>
         </div>
     <% }) %>
