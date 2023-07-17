@@ -16,7 +16,7 @@ Car Social is a web application that looks to connect car enthusiasts and share 
 - Users are able to create an account
 
 ## Mock UP of UI
-![Login page](Login.png) ![Signup page](Signup.png) ![Thread Page](<Desktop - 1-1.png>) ![Home page](<home page.png>) 
+[**LINK To Figma**] (https://www.figma.com/file/0ZS2YuLB58hpl7E9EA33UK/CAR-SOCIAL-MOCKUPS?type=design&node-id=47%3A5&mode=design&t=6uSsvRWCXDg2U7dr-1)
 ## List of Backend Endpoints
 
 | ENDPOINT       | METHOD      | PURPOSE |
