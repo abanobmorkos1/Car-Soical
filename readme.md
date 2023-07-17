@@ -4,16 +4,16 @@
 - **Project By:** Abanob Morkos
 - [**LINK TO GITHUB**](https://github.com/abanobmorkos1/project2.git)
 - [**LINK TO DEPLOYED WEBSITE**](https://project2-5847.onrender.com)
-- **List of Technologies used:** HTML, JS, CSS, Node, Express, EJS, Mongo , jQuery , Figma.
+- **List of Technologies used:** HTML, JS, CSS, Node, Express, EJS, Mongo, Figma.
 - [**LINK TO TRELLO**](https://trello.com/invite/b/Bnlb35FH/ATTI9a24d90b540304af3a3aa062b3447d7337BD880A/car-social)
 
 ## Description
 
 Car Social is a web application that looks to connect car enthusiasts and share their passion with one another, Users are able to do the following:
 
-- Users are able to post their car with whatever desired modifications 
-- Users are able Engage in discussions and share experiences through the app's discussion forum
+- Users are able to post their car  
 - Users are able to plan routes and ride together through the route planner
+- Users are able to create an account
 
 ## Mock UP of UI
 ![Login page](Login.png) ![Signup page](Signup.png) ![Thread Page](<Desktop - 1-1.png>) ![Home page](<home page.png>) 
@@ -22,13 +22,13 @@ Car Social is a web application that looks to connect car enthusiasts and share 
 | ENDPOINT       | METHOD      | PURPOSE |
 |----------------|-------------|---------|
 |/home           |  GET        | home page |
-|/Signup         |  POST       | signup page |
-|/Login          |  POST       | Login page |
-|/route          |  POST       | Creates a new ridining route |
+|user/Signup     |  POST       | signup page |
+|user/Login      |  POST       | Login page |
+|/route/new      |  POST       | Creates a new riding route |
 |/route/:id/edit |  Edit       | Edit a route |
-|/route/:id      |  PUT        | Updates the ridining route |
-|/route/:id      |  DELETE     | Destroys a ridining route |
-|/garage         |  POST       | Adds a new car to your garage |
+|/route/:id      |  PUT        | Updates the riding route |
+|/route/:id      |  DELETE     | Destroys a riding route |
+|/garage/new     |  POST       | Adds a new car to your garage |
 |/garage/:id/edit|  Edit       | Edits the car in the garage  |
 |/garage/:id     |  PUT        | Update the car in the garage |
 |/garage/:id     |  DELETE     | Deletes the car in the garage  |
