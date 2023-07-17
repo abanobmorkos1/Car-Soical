@@ -1,10 +1,19 @@
 const route = require('../models/routes');  
+const garage = require('../models/garage');
 const express = require('express');
 const router = express.Router();
 
+router.use((req, res, next) => {
+    if(req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect('/user/login');
+    }
+})
+
 router.get('/', async (req, res) => {
     const allRoutes = await route.find({})
-    res.render('Rindex.ejs', {route: allRoutes})
+    res.render('Rindex.ejs', {route: allRoutes} )
 })
 
 router.get('/new', async (req, res) => {
@@ -12,15 +21,9 @@ router.get('/new', async (req, res) => {
 })
 // Create a new car with make , model and year
 router.post('/', async (req, res) => {
-    console.log(req.body)
-     await route.create(req.body)
+    await route.create(req.body)
     res.redirect('/route')
 }) 
-router.put('/:id', async (req, res) => {
-    const id = req.params.id
-    await route.findByIdAndUpdate(id, req.body)
-    res.redirect('/route')
-})
 
 router.delete('/:id', async (req, res) => {
     const id = req.params.id
@@ -34,6 +37,11 @@ router.get('/:id/edit', async (req, res) => {
     res.render('Redit.ejs', {routes})
 })
 
+router.put('/:id', async (req, res) => {
+    const id = req.params.id
+    await route.findByIdAndUpdate(id, req.body)
+    res.redirect('/route')
+})
 
 
 module.exports = router;

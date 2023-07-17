@@ -7,17 +7,53 @@
     <%- include('./partials/files.ejs') %>
 </head>
 <body>
-
-    <% garage.forEach(element => { %>
-        <div id="garage">
-            <h1><%= element.make %></h1>
-            <a href="/garage/<%= element._id %>/edit"> <button> Edit</button></a>
-            <div id="buttons">
-           <form action="/garage/<%= element._id %>?_method=DELETE" method="post">
-            <input type="submit" value="delete" />
-            </div>
-            </form>
-        </div>
-    <% }) %>
+    <div id="container">
+        <a href="/garage/new"> <button>New Car</button></a> <a href="/route"> <button> Home</button></a>
+        <h1> Garage</h1>
+            <% garage.forEach(e => { %>
+                <div id="container">
+                    <h2>Make: <span id="make"><%= e.make %> </span></h2> 
+                    <br>
+                    <h2>Model: <span id="model"><%= e.model %> </span></h2>
+                </div>
+    
+                <div id="buttons">
+                    <form id="formm" action="/garage/<%= e._id%>?_method=delete" method="POST">
+                        <input id="delete" type="submit" value="delete" />
+                    </form>
+                    <a href="/garage/<%= e._id %>/edit"> <button>Edit</button></a>
+                </div>
+            <% }) %>
+    </div>
+        <style>
+            #container{
+                align-items: space-between;
+                display: flex;
+                flex-direction:column;       
+            }
+       
+            #buttons{
+                display: inline;
+                
+            }
+            #make {
+                color: lightgreen;
+            }
+            #model {
+                color: lightcoral;
+            }
+    
+            h1 {
+                color: rgb(113, 14, 14);
+            }
+            h2{
+                color: rgb(255, 255, 255);
+            }
+            #formm {
+                position: relative;
+                top: 21px;
+                left: 45px;
+            }
+        </style>
 </body>
 </html>

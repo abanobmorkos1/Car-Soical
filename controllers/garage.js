@@ -31,7 +31,7 @@ router.delete('/:id', async (req, res) => {
 router.get('/:id/edit', async (req, res) => {
     const id = req.params.id
     const car = await garage.findById(id)
-    res.render('edit.ejs', {car})
+    res.render('edit.ejs', {garage: car})
 })
 
 

@@ -7,20 +7,54 @@
     <%- include('./partials/files.ejs') %>
 </head>
 <body>
-    <h1>Cars</h1>
-        <% route.forEach(element => { %>
+    <a href="/user/logout"> <button>logout</button></a> 
+<div id="container">
+    <a href="/route/new"> <button>New Route</button></a>     <a href="/garage"> <button>Garage</button></a> 
+    <h1> Routes</h1>
+        <% route.forEach(e => { %>
+            <div id="container">
+                <h2>Start: <span id="start"><%= e.start %> </span></h2> 
+                <br>
+                <h2>End: <span id="end"><%= e.end %> </span></h2>
+            </div>
 
-        <div id="garagee">
-            <h1>Start</h1>
-            <h2> <%= element.start %></h2>
-            <h1>End</h1>
-            <h2><%= element.end %></h2>
-            <a href="/route/<%= element._id %>/edit"> <button> Edit</button></a>
-            <form action="/route/<%= element._id %>?_method=DELETE" method="post">
-             <input type="submit" value="delete" />
-             </form>
-         
-        </div>
-    <% }) %>
+            <div id="buttons">
+                <form id="formm" action="/route/<%= e._id%>?_method=delete" method="POST">
+                    <input id="delete" type="submit" value="delete" />
+                </form>
+                <a href="/route/<%= e._id %>/edit"> <button>Edit</button></a>
+            </div>
+        <% }) %>
+</div>
+    <style>
+        #container{
+            align-items: space-between;
+            display: flex;
+            flex-direction:column;       
+        }
+   
+        #buttons{
+            display: inline;
+            
+        }
+        #start {
+            color: lightgreen;
+        }
+        #end {
+            color: lightcoral;
+        }
+
+        h1 {
+            color: rgb(113, 14, 14);
+        }
+        h2{
+            color: rgb(255, 255, 255);
+        }
+        #formm {
+            position: relative;
+            top: 21px;
+            left: 45px;
+        }
+    </style>
 </body>
 </html>
